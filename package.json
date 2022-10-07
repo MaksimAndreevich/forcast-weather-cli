@@ -1,0 +1,26 @@
+{
+  "name": "weathercli",
+  "version": "1.0.0",
+  "description": "CLI for getting weather",
+  "main": "index.js",
+  "bin": ".index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cli",
+    "weatther"
+  ],
+  "author": "Maxim Efimov",
+  "license": "ISC",
+  "homepage": "site.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github...."
+  },
+  "bugs": {
+    "url": "https://site.com",
+    "email": "maksim.e@mail.ru"
+  }
+}
