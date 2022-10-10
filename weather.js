@@ -1,5 +1,6 @@
 #!/ust/bin/env node
 import { getArgs } from "./helpers/args.js";
+import { printError, printHelp, printSuccess } from "./services/log.service.js";
 
 const initCli = () => {
   const args = getArgs(process.argv);
@@ -7,7 +8,7 @@ const initCli = () => {
     // save city
   }
   if (args.h) {
-    // show help
+    printHelp();
   }
   if (args.t) {
     // save token
