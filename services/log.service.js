@@ -1,5 +1,6 @@
 import chalk from "chalk";
 import dedent from "dedent-js";
+import { getIcon } from "./api.service.js";
 
 const printError = (error) => {
   console.log(chalk.bgRed(" ERROR ") + " " + error);
@@ -21,4 +22,15 @@ const printHelp = () => {
   );
 };
 
-export { printError, printSuccess, printHelp };
+const printWeather = (forcast) => {
+  const { weather, main, name, wind } = forcast;
+  const icon = getIcon(weather[0].icon)
+  console.log(
+    dedent(`${chalk.bgYellow(" WEATHER ")} ${icon}
+    It's ${weather[0].description} in ${name} right now.
+    Temperature ${Math.trunc(main.temp)} (feels like ${Math.trunc(main.feels_like)})
+    Wind Speed: ${Math.trunc(wind.speed)} m/c`)
+  );
+};
+
+export { printError, printSuccess, printHelp, printWeather };
