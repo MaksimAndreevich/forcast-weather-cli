@@ -19,7 +19,7 @@ const saveKeyValue = async (key, value) => {
 const getKeyValue = async (key) => {
   if (await isExist(filePath)) {
     const file = await promises.readFile(filePath);
-    return JSON.parse(file).key;
+    return JSON.parse(file)[key];
   }
   return undefined;
 };
